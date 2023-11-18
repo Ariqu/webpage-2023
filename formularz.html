@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>TYTUŁ</title>
+</head>
+<body>
+    <!-- CONTENT -->
+<div id="container-top">
+    
+
+        <!-- NAVBAR -->
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">DARIA WEBPAGE</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Strona Główna</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="o_mnie.html">O Mnie</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="oferta.html">Oferta</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="formularz.html">Umów wizytę</a>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="formularz.html" style="background-color: rgb(189, 137, 48); color: white;">UMÓW WIZYTĘ</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+
+
+        <!-- NAVBAR-->
+
+
+        <div class="container">
+            <div class="centered">
+                <p class="bold">Kontakt | Umów wizytę</p>
+            </div>
+
+            <div id="left-side">
+                <div onclick="copy1()" class="contact-info">
+                    <div class="label">Zadzwoń</div>
+                    <div id="telefon" class="info">+48 123 456 789</div>
+                </div>
+                <div onclick="copy1()" class="contact-info">
+                    <div class="label">Napisz SMS</div>
+                    <div class="info">+48 123 456 789</div>
+                </div>
+                <div onclick="copy2()" class="contact-info">
+                    <div class="label">Napisz e-mail</div>
+                    <div id="mail" class="info">example@example.com</div>
+                </div>
+                <div class="contact-info">
+                    <div class="label">Wyślij wiadomość</div>
+                    <div class="info">Formularz po prawej stronie</div>
+                </div>
+                <div id="copyMessage">Skopiowano!</div>
+                
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <strong>Cześć!</strong> W wiadomości w formularzu prosimy uwzględnić rodzaj pakietu <br> Znajdziesz go na stronie 'Oferta'.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                  </div>
+            </div>
+        
+
+            <div id="right-side">
+                <div class="row">
+                    <div class="col-md-6 offset-md-3">
+                        <h2>Formularz Kontaktowy</h2>
+                        
+                        <form method="post" action="form.php">
+                            <div class="mb-3">
+                                <label for="imie" class="form-label">Imię<span class="required-field"></span></label>
+                                <input type="text" name="imie" class="form-control" id="imie" placeholder="Wprowadź imię" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="nazwisko" class="form-label">Nazwisko<span class="required-field"></span></label>
+                                <input type="text" name="nazwisko" class="form-control" id="nazwisko" placeholder="Wprowadź nazwisko" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Adres e-mail<span class="required-field"></span></label>
+                                <input type="email" name="email" class="form-control" id="email" placeholder="Wprowadź adres e-mail" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="telefon" class="form-label">Numer telefonu<span class="required-field"></span></label>
+                                <input type="tel" name="telefon" class="form-control" id="telefon" placeholder="Wprowadź numer telefonu" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="wiadomosc" class="form-label">Treść wiadomości<span class="required-field"></span></label>
+                                <textarea name="wiadomosc" class="form-control" id="wiadomosc" rows="4" placeholder="Wprowadź treść wiadomości" required></textarea>
+                            </div>
+                        
+                            <div class="mb-3 form-group">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="akceptacja" required>
+                                    <label class="form-check-label" for="akceptacja">
+                                        Akceptuję warunki przetwarzania danych osobowych.
+                                    </label>
+                                    <div class="invalid-feedback">
+                                        Akceptuję warunki przetwarzania danych osobowych.
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <button type="submit" class="btn btn-primary">Wyślij</button>
+                        </form>
+                        
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+        <footer class="bg-dark text-white text-center py-3">
+            <p>Nazwa Twojej Firmy &copy; 2023. Wszelkie prawa zastrzeżone.</p>
+            <p>Adres: ul. Przykładowa 123, 00-000 Miasto</p>
+            <p>Telefon: 123 456 789 | Email: info@example.com</p>
+        </footer>
+
+<script src="scripts/mouse-message.js"></script>
+</body>
+</html>
